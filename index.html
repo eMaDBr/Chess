@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda de Ajedrez</title>
 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .price {
+      color: green;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .paypal-btn {
+      margin-top: 10px;
+      padding: 10px;
+      background: #0070ba;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Tienda de Ajedrez ♟️</h1>
+  <p>Pago seguro con PayPal</p>
+</header>
+
+<section class="products">
+
+  <!-- PRODUCTO 1 -->
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1604917877931-08c57b9f0d85">
+    <h3>Tablero de Ajedrez de Madera</h3>
+    <p class="price">25 €</p>
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="Chessgamespaye@outlook.com">
+      <input type="hidden" name="item_name" value="Tablero de Ajedrez de Madera">
+      <input type="hidden" name="amount" value="25">
+      <input type="hidden" name="currency_code" value="EUR">
+      <input type="hidden" name="no_shipping" value="0">
+      <input type="hidden" name="need_phone_number" value="1">
+      <input type="submit" value="Pagar con PayPal" class="paypal-btn">
+    </form>
+  </div>
+
+  <!-- PRODUCTO 2 -->
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07d">
+    <h3>Piezas de Ajedrez Profesionales</h3>
+    <p class="price">18 €</p>
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="Chessgamespaye@outlook.com">
+      <input type="hidden" name="item_name" value="Piezas de Ajedrez Profesionales">
+      <input type="hidden" name="amount" value="18">
+      <input type="hidden" name="currency_code" value="EUR">
+      <input type="hidden" name="no_shipping" value="0">
+      <input type="hidden" name="need_phone_number" value="1">
+      <input type="submit" value="Pagar con PayPal" class="paypal-btn">
+    </form>
+  </div>
+
+  <!-- PRODUCTO 3 -->
+  <div class="product">
+    <img src="https://images.unsplash.com/photo-1584270354949-1c27c3b9e5b3">
+    <h3>Reloj Digital de Ajedrez</h3>
+    <p class="price">30 €</p>
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="Chessgamespaye@outlook.com">
+      <input type="hidden" name="item_name" value="Reloj Digital de Ajedrez">
+      <input type="hidden" name="amount" value="30">
+      <input type="hidden" name="currency_code" value="EUR">
+      <input type="hidden" name="no_shipping" value="0">
+      <input type="hidden" name="need_phone_number" value="1">
+      <input type="submit" value="Pagar con PayPal" class="paypal-btn">
+    </form>
+  </div>
+
+</section>
+
+<footer>
+  <p>El pago se envía directamente a PayPal</p>
+</footer>
+
+</body>
+</html>
